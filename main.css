@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    padding-bottom: 50px; /* Adds space for footer */
+    flex-direction: column; /* Stack content vertically */
+    min-height: 100vh; /* Ensure body takes up full height */
+}
+
+.navbar {
+    background-color: #4B0082;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    position: absolute;
+    top: 20px;
+    left: 0;
+    right: 0;
+    height: 40px;
+}
+
+.logo-container {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: purple;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+    border: 3px solid white;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: lightgray;
+}
+.team-record {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    margin-left: 10px; /* Space between logo and record */
+    padding-right: 30px;
+}
+
+/* Player Sections */
+.players-container {
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    left: 20px;
+    top: 70px;
+}
+
+.player, .coach {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.player {
+    background: orange;
+}
+
+.coach {
+    background: #4B0082;
+    color: white;
+}
+
+.player img, .coach img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.player-info h2 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.player-info p {
+    font-size: 14px;
+    margin: 2px 0 0;
+    color: gray;
+}
+
+.coach .player-info p {
+    color: white;
+}
+
+/* Games Sections */
+.games-container {
+    width: 280px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+}
+
+.game {
+    display: flex;
+    align-items: center;
+    background: orange;
+    padding: 15px;
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    justify-content: space-between; /* Ensures equal space between team logos and score */
+    width: 100%;
+    height: 78px; /* Ensures a more "boxy" height */
+}
+
+.team {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.team img {
+    width: 30px;
+    height: 30px;
+}
+
+.score {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1; /* Ensures the score stays in the center */
+    }
+
+/* Central Section with 4 Boxes */
+.center-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    grid-template-rows: repeat(2, 1fr); /* Two equal rows */
+    gap: 20px; /* Even spacing between boxes */
+    padding: 20px;
+    position: relative;
+    top: 100px; /* Adjust based on navbar height */
+    
+    width: calc(100% - 500px); /* Ensures it takes up the remaining space */
+    max-width: 1000px; /* Prevents it from getting too wide */
+    
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Adjusting Left and Right Containers */
+.left-container {
+    width: 250px; /* Adjust based on your left-side content */
+    float: left;
+    padding-bottom: 30px;
+}
+
+.right-container {
+    width: 250px; /* Adjust based on right-side content */
+    float: right;
+    padding-bottom: 30px;
+}
+
+/* Box Styling */
+.box {
+    background-color: #F2F0EF;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    overflow: hidden;
+    position: relative; /* Ensures child elements position correctly */
+}
+
+/* Ensuring Proper Spacing */
+body {
+    display: flex;
+    justify-content: center; /* Center everything */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 30px;
+}
+.logo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the circle */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #4B0082; /* Dark purple */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px; /* Adds space between footer and content */
+    padding-top: 10px;
+}
+
+.date-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
